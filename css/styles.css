@@ -78,7 +78,7 @@ picture {
     --main: "Inter", sans-serif;;
 
     /* type scale */
-    --base-size: 0.875rem; /* 14px */
+    --base-size: 1rem; /* 16px */
     --scale: 1.333;
 
     /* Start from base size for smallest heading */
@@ -115,11 +115,9 @@ picture {
   h5,
   h6 {
     font-family: var(--main);
-    color:var(--White);
   }
   h1 {
     font-size: var(--h1);
-    margin:0;
   }
   h2 {
     font-size: var(--h2);
@@ -156,7 +154,6 @@ picture {
   }
   p {
     font-size: var(--base-size);
-    margin:0;
   }
  
   figure {
@@ -198,59 +195,6 @@ picture {
     flex-direction: column;
     align-items: center;   
     gap: var(--space-300);
-  }
-
-  .profile-image {
-    aspect-ratio: 1/1;
-    width: 5.5rem;
-    border-radius: 50%;  }
-
-  .location {
-    color: var(--Green);
-    font-weight: 700;
-  }
-
-  .profile-info p {
-    margin-top: var(--space-50);
-  }
-
-  .name {
-    font-weight: 600;
-    font-size: var(--space-300);
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  ul{
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-200);
-    padding: 0;
-    list-style-type: none;
-    width: 100%;
-    margin:0
-  }
-  ul li {
-    color: var(--White);
-    font-weight: 700;
-  }
-  ul li a {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    padding: var(--space-150);
-    border-radius: var(--space-100);
-    background-color: var(--Gray700);
-    transition: background-color 600ms ease, color 600ms ease;
-  }
-  ul li a:hover, ul li a:focus, ul li a:active {
-    text-decoration: none;
-    background-color: var(--Green);
-    color: var(--Gray700);
-
   }
 }
 
