@@ -191,17 +191,29 @@ picture {
 
   h1 {
     color: var(--Stone900);
+    margin-block-start: 0;
   }
   h2,h3 {
-    margin-top: 0;
+    margin-block-start: 0;
     color: var(--Brown-800);
   }
   UL, ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-position: inside;
   }
+
+  p {
+    margin-block-start: 0;
+  }
+
+hr {
+  border: none; /* Removes the default border */
+  height: 1px; /* Sets the thickness */
+  background-color: var(--Stone150); /* Sets the color */
+}
 
   main {
     margin: 0 auto;
@@ -217,13 +229,18 @@ picture {
     margin: auto;
     display: flex;            
     flex-direction: column;  
+    gap: var(--space-500);
+  }
+  .recipe-content {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-400);
-  }
+}
 
-  .ingredients ul, .instructions ol {
-    padding-bottom: var(--space-400);
-    border-bottom: solid 1px var(--Stone150);
-  }
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-300);
 }
 
 @layer media-queries {
