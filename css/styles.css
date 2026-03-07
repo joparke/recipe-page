@@ -81,7 +81,8 @@ picture {
 
 
     /* font families */
-    --main: "Inter", sans-serif;;
+    --main: "Outfit", sans-serif;
+    --headline: "Young Serif", serif;
 
     /* type scale */
     --base-size: 1rem; /* 16px */
@@ -120,7 +121,7 @@ picture {
   h4,
   h5,
   h6 {
-    font-family: var(--main);
+    font-family: var(--headline);
   }
   h1 {
     font-size: var(--h1);
@@ -160,6 +161,7 @@ picture {
   }
   p {
     font-size: var(--base-size);
+    font-family: var(--main);
   }
  
   figure {
@@ -170,37 +172,57 @@ picture {
 
 @layer components {
     footer.attribution {
-        margin-top: 2rem;
+        padding: 2rem 0;
+        background-color: var(--Stone100);
     }
     .attribution p{ font-size: var(--small); text-align: center; }
     .attribution a:hover, .attribution a:focus, .attribution a:active {color: var(--Green);}
 
 
     body {
-        background-color: var(--Gray900);
-        color: var(--White);
+        color: var(--Stone600);
         font-size: var(--base-size);
+        font-family: var(--main);
     }
 
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-    text-align: center;
+    img {
+        border-radius: var(--space-150);
+    }
+
+  h1 {
+    color: var(--Stone900);
   }
-  .card {
-    background-color: var(--Gray800);
-    border-radius: var(--space-150);
+  h2,h3 {
+    margin-top: 0;
+    color: var(--Brown-800);
+  }
+  UL, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  main {
+    margin: 0 auto;
+    padding: var(--space-1600);
+    background-color: var(--Stone100);
+  }
+  .recipe {
+    background-color: var(--White);
+    border-radius: var(--space-300);
     padding: var(--space-300);
     /* min-width: 20.438rem; */
     width: 100%;           /* Allow card to fill container width */
-    max-width: 20.438rem;  /* Limit max size on larger screens */
     margin: auto;
     display: flex;            
-    flex-direction: column;
-    align-items: center;   
-    gap: var(--space-300);
+    flex-direction: column;  
+    gap: var(--space-400);
+  }
+
+  .ingredients ul, .instructions ol {
+    padding-bottom: var(--space-400);
+    border-bottom: solid 1px var(--Stone150);
   }
 }
 
