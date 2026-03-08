@@ -178,15 +178,11 @@ picture {
     .attribution p{ font-size: var(--small); text-align: center; }
     .attribution a:hover, .attribution a:focus, .attribution a:active {color: var(--Green);}
 
-
     body {
         color: var(--Stone600);
         font-size: var(--base-size);
         font-family: var(--main);
-    }
-
-    img {
-        border-radius: var(--space-150);
+        background-color: var(--Stone100);
     }
 
   h1 {
@@ -234,15 +230,8 @@ picture {
     margin: .01px 0; /* Adds spacing above and below */
   }
 
-  main {
-    margin: 0 auto;
-    padding: var(--space-1600);
-    background-color: var(--Stone100);
-  }
   .recipe {
     background-color: var(--White);
-    border-radius: var(--space-300);
-    padding: var(--space-500);
     /* min-width: 20.438rem; */
     width: 100%;           /* Allow card to fill container width */
     margin: auto;
@@ -254,6 +243,7 @@ picture {
     display: flex;
     flex-direction: column;
     gap: var(--space-400);
+    padding:  0 var(--space-400) var(--space-500) var(--space-400);
 }
 
   section {
@@ -312,11 +302,32 @@ picture {
 
 
   @media (min-width: 48rem) {     /* 768px and above -- tablet */
+    main {
+      max-width: 38.5rem;
+      margin: 0 auto;
+      padding: var(--space-1600) var(--space-600);
+      }
 
+      .recipe {
+    border-radius: var(--space-300);
+    padding: var(--space-500);
+    gap: var(--space-500);
+  }
+
+    .recipe-content {
+    gap: var(--space-400);
+    padding: 0 !important;
+}
+
+      img {
+        border-radius: var(--space-150);
+    }
   } 
 
   @media (min-width: 90rem) {     /* 1440px and above -- desktop */
-  
+    main {
+      max-width: 46rem;
+    }
   } 
 
 }
