@@ -198,22 +198,41 @@ picture {
     color: var(--Brown-800);
   }
   UL, ol {
-    padding-inline-start: 0;
+    padding-inline-start: var(--space-300);
     padding-inline-end: 0;
     margin-block-start: 0;
     margin-block-end: 0;
-    list-style-position: inside;
+    list-style-position: outside;
   }
+
+  ul li, ol li {
+    padding-left: var(--space-200);
+  }
+
+  ul li:not(:last-child),
+  ol li:not(:last-child) {
+    margin-bottom: var(--space-100);
+  }
+
+  ol li span {
+    font-weight: 700;
+  }
+
+  ol li::marker {
+  color: var(--Brown-800);
+  font-weight: 700;
+}
 
   p {
     margin-block-start: 0;
   }
 
-hr {
-  border: none; /* Removes the default border */
-  height: 1px; /* Sets the thickness */
-  background-color: var(--Stone150); /* Sets the color */
-}
+  hr {
+    border: none; /* Removes the default border */
+    height: 1px; /* Sets the thickness */
+    background-color: var(--Stone150); /* Sets the color */
+    margin: .01px 0; /* Adds spacing above and below */
+  }
 
   main {
     margin: 0 auto;
@@ -223,7 +242,7 @@ hr {
   .recipe {
     background-color: var(--White);
     border-radius: var(--space-300);
-    padding: var(--space-300);
+    padding: var(--space-500);
     /* min-width: 20.438rem; */
     width: 100%;           /* Allow card to fill container width */
     margin: auto;
@@ -237,21 +256,67 @@ hr {
     gap: var(--space-400);
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-300);
-}
+  section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-300);
+  }
+
+  .preparation-time {
+    background-color: var(--Rose-50);
+    padding: var(--space-300);
+    column-gap: var(--space-200);
+    border-radius: var(--space-150);
+  }
+
+  .preparation-time h3 {
+    font-family: var(--main);
+    font-size: 1.25rem;
+  }
+
+  .nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .nutrition table tr:not(:last-child) {
+    border-bottom: 1px solid var(--Stone150);
+  }
+
+  .nutrition table td {
+    padding: var(--space-150) 0;
+  }
+
+  .nutrition table tr:first-child td {
+    padding-top: 0;
+  }
+
+  .nutrition table tr:last-child td {
+    padding-bottom: 0;
+  }
+
+  .nutrition table td:nth-child(1) {
+    padding-inline-start: var(--space-400);
+  }
+
+  .nutrition table td:nth-child(2) {
+    color: var(--Brown-800);
+    font-weight: 700;
+  }
 
 @layer media-queries {
-  @media (min-width: 48rem) {
-      .card {
-    max-width: 24rem;
-    padding: var(--space-500);
-  }
 
   @media (prefers-reduced-motion: reduce) {
   transition: none; /* Remove transitions to respect user preference */
 }
+
+
+  @media (min-width: 48rem) {     /* 768px and above -- tablet */
+
   } 
+
+  @media (min-width: 90rem) {     /* 1440px and above -- desktop */
+  
+  } 
+
 }
