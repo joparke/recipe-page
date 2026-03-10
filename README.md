@@ -17,7 +17,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - Repo URL: [https://github.com/joparke/recipe-page](https://github.com/joparke/recipe-page)
-- Live Site URL: [https://joparke.github.io/social-link-profile](https://joparke.github.io/social-link-profile/)
+- Live Site URL: [https://joparke.github.io/recipe-page/](https://joparke.github.io/recipe-page/)
 
 ### Built with
 
